@@ -1,0 +1,97 @@
+* {
+	outline: none;
+}
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+#header {
+	width: 100%;
+}
+#footer {
+	width: 100%;
+}
+body h2, body h3, #testForm3 h5{
+	text-align: center;
+	color: #64408c;
+}
+#testForm3 h5 {
+	margin: 0;
+}
+form .label {
+	color: #64408c;
+	font-weight: bold;
+}
+form input {
+	margin: 6px;
+}
+form textarea {
+	margin: 6px 6px 0 0;
+}
+
+#state {
+	width: 100px;
+}
+#zipcode {
+	width: 80px;
+}
+#felony {
+	width: 300px;
+}
+#job1 p, #job2 p{
+	color: #64408c;
+	font-weight: bold;
+	padding: 3px;
+}
+.before_today, .after_today, input.end_of_study, #today {
+	width: 120px;
+}
+.current {
+	background-color: #CBC3E3 !important;
+}
+/* just to see where required input */
+/*input[required] {
+	background-color: rgba(255, 0, 0, 0.2);
+}*/
+input[type="text"], input[type="email"], textarea {
+	box-sizing: border-box;
+	border: 3px solid darkgray;
+	outline: none;
+	padding: 3px;
+}
+#year_salary {
+	border: 2px solid darkgray;
+	box-sizing: border-box;
+	outline: none;
+	padding: 4px;
+	width: 300px;
+	background-color: white;
+}
+input[type="text"]:focus {
+	border: 3px solid black;
+}
+#tabs {
+	background-color: #f6f4f8;
+	width: 95%;
+	margin:auto;
+	margin-bottom: 10px;
+}
+p.divider {
+	border-bottom: 1px solid #cbbcd8;
+	margin: 10px;
+}
+#outer {
+	overflow: hidden;
+	width: 95%;
+}
+label.error {
+	font-size: 90%;
+	color: #C71585;
+	font-weight: normal;
+}
+#tabs div.radio_group {
+	display: inline!important;
+}
+span.bigger {
+ font-size: 120%;
+}

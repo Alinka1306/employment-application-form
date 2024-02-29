@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Yamaha - Employment Application</title>
+		<link href="css/jquery-ui.css" rel="stylesheet" />
+		<link href="css/jquery-ui.theme.css" rel="stylesheet" />
+		<link href="css/site.css" rel="stylesheet" />
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/jquery.validate.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/sample.js"></script>
+	</head>
+	<body>
+		<header>
+			<img src="images/header.png" id="header">
+		</header>
+		<h2>Employment Application</h2>
+		<div id="tabs">
+			<ul>
+				<li><a href="#personal">Personal Information</a></li>
+				<li><a href="#employment">Employment History</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#other">Other Information</a></li>
+				<li><a href="#submit">Submit Application</a></li>
+			</ul>
+			<div id="personal">
+				<form id="testForm0">
+					<label for="first_name" class="label" >First Name: </label>
+					<input name="first_name" id="first_name" type="text" required title="Please type your first name.">&emsp;<br>
+					<label for="middle_i" class="label" >Middle Name: </label>
+					<input name="nmn" id="nmn" type="checkbox" value="Yes">
+					<label for="nmn">No Middle Name</label>
+					<input name="middle_i" id="middle_i" required type="text" title="Please type your middle initial."><br>
+					<label for="last_name" class="label" >Last Name: </label>
+					<input name="last_name" id="last_name" type="text" required title="Please type your last name."><br>
+
+					<label for="dob" class="label">Date of Birth: </label>
+					<input name="dob" id="dob" class="before_today" type="text" required title="Please type your date of birth.">&emsp;
+					<div class="radio_group">
+						<span class="label">Gender:</span>
+						<input name="gender" id="male" type="radio" value="Male" required>
+						<label for="male">Male</label>
+						<input name="gender" id="female" type="radio" value="Female">
+						<label for="female">Female</label>
+					</div>
+					<br><br>
+
+					<label for="address" class="label">Address: </label>
+					<input name="address" id="address" type="text" required title="Please type your street address." placeholder="Street">
+					<input name="address_apt" type="text" title="Please type your apartment/unit number." placeholder="Apt/Unit number"><br>
+					&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;<input name="address_city" type="text" required title="Please type your city." placeholder="City">
+					<input name="address_state" id="state" type="text" required maxlength="2" title="Please type your state." placeholder="State">
+					<input name="address_zip" id="zipcode" type="text" required title="Please type your zip code." maxlength="5"  placeholder="Zip-code"><br>
+
+					<label for="phone" class="label">Phone: </label>
+					<input name="phone" id="phone" required type="text" class="phone_number" title="Please type your phone number."><label></label><br>
+					<label for="email" class="label">Email: </label>
+					<input name="email" id="email" required type="email" title="Please type your email."><label></label><br><br>
+
+					<label for="date" class="label">Date Available: </label>
+					<input name="date" id="date" class="after_today" type="text" required title="Please type your available date to start working."><br>
+					<label for="position" class="label">Position Applied for: </label>
+					<input name="position" id="position" type="text" required title="Please choose the position you applied for from the autocomplete menu.">
+					<br>
+
+					<label for="salary" class="label">Desired Salary (per hour): $</label>
+					<input name="salary" id="salary" type="text" required title="Please type your desired salary.">
+					<label class="label" id="year_salary">Year Salary ≈  $________</label>
+					<!--<label for="year_salary" class="label"></label>
+					<input name="year_salary" id="year_salary" type="text" title="Here you can see your approximate year salary.">--><br>
+					<br>
+
+					<label for="ssn" class="label">SSN: </label>
+					<input name="ssn" id="ssn" type="text" maxlength="11" required title="Please type your Social Security Number."><label></label><br>
+
+					<div class="radio_group">
+						<span class="label">Are you a citizen of the United States? </span>
+						<input name="citizen" id="yes" type="radio" value="Yes" required class="click_this_to_hide">
+						<label for="yes">Yes</label>
+						<input name="citizen" id="no" type="radio" value="No" class="click_this_to_show">
+						<label for="no">No</label>&emsp;
+					</div>
+					<div class="radio_group">
+						<span class="label hide_at_first">Are you authorized to work in the U.S.? </span>
+						<input name="work" id="yes2" type="radio" value="Yes" required class="hide_at_first">
+						<label for="yes2" class="hide_at_first">Yes</label>
+						<input name="work" id="no2" type="radio" value="No" class="hide_at_first">
+						<label for="no2" class="hide_at_first">No</label>
+					</div><br><br>
+
+					<input type="button" value="Submit" id="tab0submit" class="submit">
+				</form>
+
+			</div>
+			<div id="employment">
+				<form id="testForm1">
+					<div class="radio_group">
+						<span class="label">Have you ever worked for this company? </span>
+						<input name="worked" id="yes3" type="radio" required value="Yes" class="click_this_to_show">
+						<label for="yes3">Yes</label>
+						<input name="worked" id="no3" type="radio" value="No" class="click_this_to_hide">
+						<label for="no3">No</label>&emsp;
+					</div><br>
+					<label for="start" class="label hide_at_first">Start date: </label>
+					<input name="work_date_start" id="start" class="before_today hide_at_first" required type="text" title="When did you start working?">&emsp;
+					<label for="end" class="label hide_at_first">End date: </label>
+					<input name="work_date_end" id="end" class="before_today hide_at_first" required type="text" title="When did you quit?">
+					<br>
+					<div class="radio_group">
+						<span class="label">Have you ever been convicted of a felony? </span>
+						<input name="felony" id="yes4" type="radio" required value="Yes" class="click_this_to_show_2">
+						<label for="yes4">Yes</label>
+						<input name="felony" id="no4" type="radio" value="No" class="click_this_to_hide_2">
+						<label for="no4">No</label>&emsp;
+					</div><br>
+					<span class="label hide_at_first_2" id="felony">Explain: <textarea rows="2" cols="50" required name="felony_explain"></textarea></span>
+
+					<h3>Previous Employment</h3>
+					<div id="job1">
+						<p class="ui-state-default ui-corner-all">Job 1&emsp;<i>(Leave open if you want to include this part in your application)</i><span class="ui-icon ui-icon-triangle-1-s"></span></>
+						<div id="previous_job1">
+							<label for="company" class="label" >Company: </label>
+							<input name="company" id="company" type="text" required title="Please type the name of the company."><br>
+							<label for="company_phone" class="label" >Phone: </label>
+							<input name="company_phone" id="company_phone" type="text" class="phone_number" required title="Please type phone number of the company."><label></label><br>
+							<label for="company_address" class="label" >Address: </label>
+							<input name="company_address" id="company_address" type="text" required title="Please type address of the company."><br>
+							<label for="supervisor" class="label" >Supervisor: </label>
+							<input name="supervisor" id="supervisor" type="text" required title="Please type the supervisor."><br>
+							<label for="job_title" class="label" >Job Title: </label>
+							<input name="job_title" id="job_title" type="text" required title="Please type the job title."><br>
+							<label for="start_salary" class="label">Starting Salary: $</label>
+							<input name="start_salary" id="start_salary" type="text" required title="Please type your starting salary."><br>
+							<label for="end_salary" class="label">Ending Salary: $</label>
+							<input name="end_salary" id="end_salary" type="text" required title="Please type your ending salary.">
+							<br>
+							<span class="label" id="responsibilities" >Responsibilities: <textarea rows="2" cols="40" name="responsibilities" required></textarea></span>
+							<br>
+							<label for="to" class="label">Start date: </label>
+							<input name="from" id="from" class=" before_today" required type="text" title="When did you start working?">&emsp;
+							<label for="to" class="label">End date: </label>
+							<input name="to" id="to" class="before_today" required type="text" title="When did you quit?"><br>
+							<span class="label" id="reason">Reason for Leaving: <textarea rows="1" cols="30" name="reason" required></textarea></span>
+							<br><br>
+							<div class="radio_group">
+								<span class="label">May we contact your previous supervisor for a reference? </span>
+								<input name="pr_supervisor1" id="yes5" required type="radio" value="Yes">
+								<label for="yes5">Yes</label>
+								<input name="pr_supervisor1" id="no5" type="radio" value="No">
+								<label for="no5">No</label>
+							</div><br><br>
+						</div>
+					</div>
+					<div id="job2"><p  class="ui-state-default ui-corner-all">Job 2&emsp;<i>(Leave open if you want to include this part in your application)</i><span class="ui-icon ui-icon-triangle-1-s"></span></p>
+						<div id="previous_job2">
+							<label for="company2" class="label" >Company: </label>
+							<input name="company2" id="company2" type="text" required title="Please type the name of the company."><br>
+							<label for="company_phone2" class="label" >Phone: </label>
+							<input name="company_phone2" id="company_phone2" type="text" class="phone_number" required title="Please type phone number of the company."><label></label><br>
+							<label for="company_address2" class="label" >Address: </label>
+							<input name="company_address2" id="company_address2" type="text" required title="Please type address of the company."><br>
+							<label for="supervisor2" class="label" >Supervisor: </label>
+							<input name="supervisor2" id="supervisor2" type="text" required title="Please type the supervisor.">
+							<br>
+							<label for="job_title2" class="label" >Job Title: </label>
+							<input name="job_title2" id="job_title2" type="text" required title="Please type the job title."><br>
+							<label for="start_salary2" class="label">Starting Salary: $</label>
+							<input name="start_salary2" id="start_salary2" type="text" required title="Please type your starting salary."><br>
+							<label for="end_salary2" class="label">Ending Salary: $</label>
+							<input name="end_salary2" id="end_salary2" type="text" required title="Please type your ending salary.">
+							<br>
+							<span class="label" id="responsibilities2">Responsibilities: <textarea rows="2" cols="40" name="responsibilities2" required></textarea></span>&emsp;
+							<br>
+							<label for="from2" class="label">Start date: </label>
+							<input name="from2" id="from2" class="before_today" required type="text" title="When did you start working?">&emsp;
+							<label for="to2" class="label">End date: </label>
+							<input name="to2" id="to2" class="before_today" required type="text" title="When did you quit?"><br>
+							<span class="label" id="reason2">Reason for Leaving: <textarea rows="1" cols="30" name="reason2" required></textarea></span>&emsp;
+							<br><br>
+							<div class="radio_group">
+								<span class="label">May we contact your previous supervisor for a reference? </span>
+								<input name="pr_supervisor2" id="yes5_2" required type="radio" value="Yes">
+								<label for="yes5_2">Yes</label>
+								<input name="pr_supervisor2" id="no5_2" type="radio" value="No">
+								<label for="no5_2">No</label>
+							</div><br><br>
+						</div>
+					</div>
+					<br>
+					<input type="button" value="Submit" id="tab1submit" class="submit">
+				</form>
+
+			</div>
+			<div id="education">
+				<form id="testForm2">
+					<label for="school" class="label" >High School: </label>
+					<input name="school" id="school" type="text" required title="Please type the name of the High School."><br>
+					<label for="school_address" class="label" >Address: </label>
+					<input name="school_address" id="school_address" type="text" required title="Please type address of the High School.">
+					<br>
+					<label for="school_from" class="label">Start date: </label>
+					<input name="school_from" id="school_from" class="before_today" required type="text" title="When did you start study in High School?">&emsp;
+					<label for="school_to" class="label">End date: </label>
+					<input name="school_to" id="school_to" class="end_of_study" required type="text" title="When did you quit study in High School?"><br>
+					<div class="radio_group">
+						<span class="label">Did you graduate? </span>
+						<input name="graduate" id="yes6" type="radio" value="Yes" class="click_this_to_show" required>
+						<label for="yes6">Yes</label>
+						<input name="graduate" id="no6" type="radio" value="No" class="click_this_to_hide">
+						<label for="no6">No</label>&emsp;
+					</div>
+					<label for="diploma" class="label hide_at_first" >Diploma: </label>
+					<input name="diploma" id="diploma" type="text" required title="Please type your Diploma." class="hide_at_first"><br>
+
+					<div id="education2"><p  class="ui-state-default ui-corner-all">College&emsp;<i>(Leave open if you want to include this part in your application)</i><span class="ui-icon ui-icon-triangle-1-s"></span></p>
+						<div id="college">
+							<label for="college_name" class="label" >College: </label>
+							<input name="college" id="college_name" type="text" required title="Please type the name of the College."><br>
+							<label for="college_address" class="label" >Address: </label>
+							<input name="college_address" id="college_address" type="text" required title="Please type address of the College.">
+							<br>
+							<label for="college_from" class="label">Start date: </label>
+							<input name="college_from" id="college_from" class="before_today" required type="text" title="When did you start study?">&emsp;
+							<label for="college_to" class="label">End date: </label>
+							<input name="college_to" id="college_to" class="end_of_study" required type="text" title="When did you quit study?"><br>
+							<div class="radio_group">
+								<span class="label">Did you graduate? </span>
+								<input name="graduate_college" id="yes6_2" type="radio" value="Yes" required class="click_this_to_show_2">
+								<label for="yes6_2">Yes</label>
+								<input name="graduate_college" id="no6_2" type="radio" value="No" class="click_this_to_hide_2">
+								<label for="no6_2">No</label>&emsp;
+							</div>
+							<label for="diploma_college" class="label hide_at_first_2" >Diploma: </label>
+							<input name="diploma_college" id="diploma_college" type="text" required title="Please type your Diploma from college." class="hide_at_first_2">
+						</div>
+					</div>
+					<div id="education3"><p  class="ui-state-default ui-corner-all">Other&emsp;<i>(Leave open if you want to include this part in your application)</i><span class="ui-icon ui-icon-triangle-1-s"></span></p>
+						<div id="other_college">
+							<label for="other_name" class="label" >Institution: </label>
+							<input name="other" id="other_name" type="text" required title="Please type the name of the other educational institution."><br>
+							<label for="other_address" class="label" >Address: </label>
+							<input name="other_address" id="other_address" type="text" required title="Please type address of the other educational institution.">
+							<br>
+							<label for="other_from" class="label">Start date: </label>
+							<input name="other_from" id="other_from" class="before_today" required type="text" title="When did you start study?">&emsp;
+							<label for="other_to" class="label">End date: </label>
+							<input name="other_to" id="other_to" class="end_of_study" required type="text" title="When did you quit study?"><br>
+							<div class="radio_group">
+								<span class="label">Did you graduate? </span>
+								<input name="graduate_other" id="yes6_3" type="radio" value="Yes" required class="click_this_to_show_3">
+								<label for="yes6_3">Yes</label>
+								<input name="graduate_other" id="no6_3" type="radio" value="No" class="click_this_to_hide_3">
+								<label for="no6_3">No</label>&emsp;
+							</div>
+							<label for="diploma_other" class="label hide_at_first_3" >Diploma: </label>
+							<input name="diploma_other" id="diploma_other" type="text" required title="Please type your Diploma from other educational institution." class="hide_at_first_3">
+						</div>
+					</div><br>
+					<input type="button" value="Submit" id="tab2submit" class="submit">
+				</form>
+
+			</div>
+			<div id="other">
+				<form id="testForm3">
+					<h3>Military Service</h3>
+					<div class="radio_group">
+						<span class="label">Have you ever been in the military? </span>
+						<input name="military" id="yes7" type="radio" value="Yes" class="click_this_to_show" required>
+						<label for="yes7">Yes</label>
+						<input name="military" id="no7" type="radio" value="No" class="click_this_to_hide" required>
+						<label for="no7">No</label>&emsp;
+					</div>
+					<div id="military_service" class="hide_at_first">
+						<label for="branch" class="label">Branch: </label>
+						<input name="branch" id="branch" required type="text" title="What is your branch?">&emsp;
+						<label for="branch_from" class="label">From: </label>
+						<input name="branch_from" id="branch_from" class="before_today" required type="text" title="When did you start?">&emsp;
+						<label for="branch_to" class="label">To: </label>
+						<input name="branch_to" id="branch_to" class="before_today" required type="text" title="When did you quit?"><br>
+						<label for="rank" class="label">Rank at Discharge: </label>
+						<input name="rank" id="rank" required type="text" title="What is your rank at discharge?"><br>
+						<label for="type" class="label">Type of Discharge: </label>
+						<input name="type" id="type" required type="text" title="What is your type of discharge?"><br>
+						<label for="honorable" class="label">If other than honorable, explain: </label>
+						<input name="honorable" id="honorable" required type="text" title="Explain?">
+					</div>
+					<h3>References</h3>
+					<h5><i>Please list three professional references.</i></h5>
+					<label for="reference1" class="label" >Full Name: </label>
+					<input name="reference1" id="reference1" type="text" required title="Please type the name of the reference."><br>
+					<label for="relationship1" class="label" >Relationship: </label>
+					<input name="relationship1" id="relationship1" type="text" required title="Please type the relationship of the reference to you."><br>
+					<label for="company_1" class="label" >Company: </label>
+					<input name="company_1" id="company_1" type="text" required title="Please type the name of the company."><br>
+					<label for="reference_phone" class="label">Phone: </label>
+					<input name="reference_phone" id="reference_phone" class="phone_number" required type="text" title="Please type the phone number of the reference."><br>
+					<label for="reference1_address" class="label" >Address: </label>
+					<input name="reference1_address" id="reference1_address" type="text" required title="Please type address of the reference.">
+					<p class="divider"></p>
+
+					<label for="reference2" class="label" >Full Name: </label>
+					<input name="reference2" id="reference2" type="text" required title="Please type the name of the reference."><br>
+					<label for="relationship2" class="label" >Relationship: </label>
+					<input name="relationship2" id="relationship2" type="text" required title="Please type the relationship of the reference to you."><br>
+					<label for="company_2" class="label" >Company: </label>
+					<input name="company_2" id="company_2" type="text" required title="Please type the name of the company."><br>
+					<label for="reference_phone2" class="label">Phone: </label>
+					<input name="reference_phone2" id="reference_phone2" class="phone_number" required type="text" title="Please type the phone number of the reference."><br>
+					<label for="reference2_address" class="label" >Address: </label>
+					<input name="reference2_address" id="reference2_address" type="text" required title="Please type address of the reference.">
+					<p class="divider"></p>
+
+					<label for="reference3" class="label" >Full Name: </label>
+					<input name="reference3" id="reference3" type="text" required title="Please type the name of the reference."><br>
+					<label for="relationship3" class="label" >Relationship: </label>
+					<input name="relationship3" id="relationship3" type="text" required title="Please type the relationship of the reference to you."><br>
+					<label for="company_3" class="label" >Company: </label>
+					<input name="company_3" id="company_3" type="text" required title="Please type the name of the company."><br>
+					<label for="reference_phone3" class="label">Phone: </label>
+					<input name="reference_phone3" id="reference_phone3" class="phone_number" required type="text" title="Please type the phone number of the reference."><br>
+					<label for="reference3_address" class="label" >Address: </label>
+					<input name="reference3_address" id="reference3_address" type="text" required title="Please type address of the reference.">
+
+					<br><br>
+					<input type="button" value="Submit" id="tab3submit" class="submit">
+				</form>
+			</div>
+			<div id="submit">
+				<p><i>I certify that my answers are true and complete to the best of my knowledge.</i></p>
+				<p><i>If this application leads to employment, I understand that false or misleading information in my application or
+					interview may result in my release.</i></p>
+
+				<form id="testForm4">
+					<label for="signature" class="label" >Signature: </label>
+					<input name="signature" id="signature" type="text" required title="Please type your first and last name." placeholder="Full Name">&emsp;
+					<label for="today" class="label">Date: </label>
+					<input name="today" id="today" class="today" required type="text" title="Choose today's date.">
+
+					<br><br>
+					<input type="button" value="Submit" id="tab4submit" class="submit">
+				</form>
+			</div>
+		</div> <!-- end of the tabs div -->
+
+
+		<div id="confirm">
+			<h3>Are you sure?</h3>
+			<p>By submitting this form, you are certifying that the information you provided is true and complete. </p>
+		</div>
+	
+		<footer>
+			<img src="images/footer.png" id="footer">
+		</footer>
+	
+	</body>
+</html>
